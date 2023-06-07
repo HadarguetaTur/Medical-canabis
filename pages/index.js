@@ -2,7 +2,7 @@ import React from 'react';
 import {  faHandsHelping,  faHeart, faFileAlt, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { Header } from '@/components/Header/Header';
 import { About } from '@/components/about/about';
-import { Form } from '@/pages/form/form';
+import  Form  from '@/pages/form/form';
 import Testimonials from '@/components/Testimonials/testimonials';
 import Navbar from '@/components/Navbar/navbar';
 import ServiceList from '@/components/ServiseList/serviceList';
