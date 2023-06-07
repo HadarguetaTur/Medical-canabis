@@ -3,7 +3,7 @@ import FromImage from '../../public/hero02.jpeg';
 import { useState } from 'react';
 
 
-export function Form() {
+const Form = () => {
     const [lead, setLead] = useState({});
     const [submissionStatus, setSubmissionStatus] = useState(null);
 
@@ -97,3 +97,4 @@ export function Form() {
     );
 }
 
+export default Form;
