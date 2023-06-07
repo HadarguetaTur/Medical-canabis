@@ -12,14 +12,15 @@ const recipientPhoneNumber = process.env.RECIPIENT_PHONE_NUMBER;
 
 const client = new twilio(twilioAccountSid, twilioAuthToken);
 
-export default async function handler(req, res) {
+export default async function leads(req, res) {
   if (req.method === 'POST') {
     const { name, email, phone, _id = new ObjectId() } = req.body;
     const lead = {
       name,
       email,
       phone,
-    };
+      _id,
+    }; 
 
     const mongoClient = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
     try {
