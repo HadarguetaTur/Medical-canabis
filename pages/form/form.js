@@ -3,6 +3,7 @@ import FromImage from '../../public/hero02.jpeg';
 import { useState } from 'react';
 
 
+
 const Form = () => {
     const [lead, setLead] = useState({});
     const [submissionStatus, setSubmissionStatus] = useState(null);
@@ -12,7 +13,7 @@ const Form = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch('/api/leads', {
+            const response = await fetch('../api/leads', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
