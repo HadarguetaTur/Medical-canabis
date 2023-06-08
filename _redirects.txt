@@ -1,0 +1,2 @@
+# Redirects from what the browser requests to what we serve
+/api/leads       https://adorable-starship-a8d90b.netlify.app/api/leads       
