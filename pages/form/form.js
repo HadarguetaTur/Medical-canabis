@@ -49,7 +49,6 @@ const Form = () => {
                     השאירו פרטים
                 </h2>
                 <form className="mt-8">
-                    {/* Form inputs */}
                     <div className="flex flex-col md:flex-row justify-center">
                         <input
                             type="text"
