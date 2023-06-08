@@ -34,9 +34,6 @@ export default function LandingPage() {
       icon: faHandsHelping,
     },
   ];
-
-
-
   return (
     <div>
       <Head>
