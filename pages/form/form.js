@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import FromImage from '../../public/hero02.jpeg';
 import { useState } from 'react';
+import axios from 'axios';
+
 
 
 const Form = () => {
@@ -12,24 +14,19 @@ const Form = () => {
         e.preventDefault();
 
         try {
-            const response = await fetch('/api/leads', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(lead),
-            });
+            const response = await axios.post('/api/leads', lead);
+            console.log(response);
 
-            if (response.ok) {
+            if (response.status === 200) {
                 setSubmissionStatus('success');
-            } else {
+              } else {
                 setSubmissionStatus('failure');
+              }
+            } catch (error) {
+              console.error('Error:', error);
+              setSubmissionStatus('failure');
             }
-        } catch (error) {
-            console.error('Error:', error);
-            setSubmissionStatus('failure');
-        }
-    };
+          };
 
 
     const handleInputChange = (e) => {
